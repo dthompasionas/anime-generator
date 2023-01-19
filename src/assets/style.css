@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Permanent+Marker&display=swap');
+
+/* root */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Font */
+h1 {
+    font-family: 'Kanit', sans-serif;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Header */
+
+.carousel-item {
+  height: 37rem;
+  background: #000;
+  color: white;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: top;
+  background-size: cover;
+  background-image: url(./images/);
+  opacity: 0.5;
+}
+
+#overlay-image-2 {
+  background-position: center;
+}
+
+#overlay-image-3 {
+  background-position: center;
+}
+
+/* popular section */
+
+.swiper {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.swiper h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
+  
+}
+
+
+.swiper h2 span {
+    font-family:'Permanent Marker', cursive;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 22em;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 12em;
+  height: 90%;
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 1.5em;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
