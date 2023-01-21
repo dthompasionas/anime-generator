@@ -11,8 +11,6 @@ fetch("https://gogoanime2.p.rapidapi.com/popular", options)
   .then((response) => console.log(response))
   .catch((err) => console.error(err));
 
-
-
 // Swiper Js
 
 let swiper = new Swiper(".mySwiper", {
@@ -29,5 +27,12 @@ let swiper = new Swiper(".mySwiper", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
 });

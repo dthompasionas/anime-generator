@@ -19,6 +19,26 @@ h2 {
 
 /* Header */
 
+/* navbar */
+#search-bar {
+  width: 400px;
+}
+
+/* hero section */
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner .container {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
 .carousel-item {
   height: 37rem;
   background: #000;
@@ -52,6 +72,10 @@ h2 {
 
 #overlay-image-3 {
   background-position: center;
+}
+
+@media screen and { max-width: 
+  
 }
 
 /* popular section */

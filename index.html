@@ -16,7 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./src/assets/style.css" />
-    <title>WhatWeWatch</title>
+    <script src="https://kit.fontawesome.com/d5e113eedd.js" crossorigin="anonymous"></script>
+    <title>OtakuList</title>
   </head>
   <body>
     <header>
@@ -33,26 +34,20 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">WhatWeWatch</a>
+          <a class="navbar-brand" href="#">OtakuList</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
+                <a class="nav-link" href="#">Browse</a>
               </li>
             </ul>
-            <form class="d-flex">
+            <form class="d-flex" id="search-bar">
               <input
                 class="form-control me-2"
                 type="search"
@@ -63,9 +58,11 @@
                 Search
               </button>
             </form>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./public/signup.html">Sign in</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -91,6 +88,14 @@
           ></li>
         </ol>
         <div class="carousel-inner">
+          <div class="container text-light">
+            <h1>OtakuList</h1>
+            <p>
+              Browse all of our anime and manga to find something new that suits
+              your taste! Keep track by adding it to your list.
+            </p>
+            <a href="#" class="btn btn-lg btn-primary">Make a List</a>
+          </div>
           <div class="carousel-item active">
             <div
               class="overlay-image"
@@ -98,14 +103,6 @@
                 background-image: url(./src/assets/images/chainsaw-man.jpg);
               "
             ></div>
-            <div class="container">
-              <h1>WhatWeWatch</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                dignissimos quisquam officiis nobis fugiat aliquam.
-              </p>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
-            </div>
           </div>
           <div class="carousel-item">
             <div
@@ -115,14 +112,6 @@
                 background-image: url(./src/assets/images/straw_hat_pirates.jpg);
               "
             ></div>
-            <div class="container">
-              <h1>WhatWeWatch</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                dignissimos quisquam officiis nobis fugiat aliquam.
-              </p>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
-            </div>
           </div>
           <div class="carousel-item">
             <div
@@ -130,14 +119,6 @@
               id="overlay-image-3"
               style="background-image: url(./src/assets/images/slime.jpg)"
             ></div>
-            <div class="container">
-              <h1>WhatWeWatch</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                dignissimos quisquam officiis nobis fugiat aliquam.
-              </p>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
-            </div>
           </div>
         </div>
         <a
@@ -159,38 +140,11 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a>
       </div>
-      <!-- <div
-        id="carousel"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="../src/assets/images/devils-a-part-timer.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../src/assets/images/Food-Wars-Shokugeki-no-Soma.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="../src/assets/images/rising-shield-hero.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-          </div>
-        </div>
-      </div> -->
     </header>
+
+    <!-- Anime swiper -->
     <section class="swiper mySwiper">
-      <h2>Popular <span style="color: rgb(0, 102, 255);"> Anime</span></h2>
+      <h2>Popular <span style="color: rgb(0, 102, 255)"> Anime</span></h2>
       <div class="swiper-wrapper">
         <div class="card swiper-slide">
           <div class="card-image">
@@ -297,10 +251,12 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
+      <!-- swipe buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
 
     <!-- Manga swiper -->
-
     <section class="swiper mySwiper">
       <h2>Popular <span style="color: rgb(38, 163, 38)">Manga</span></h2>
       <div class="swiper-wrapper">
@@ -409,12 +365,16 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- bootstrap -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
